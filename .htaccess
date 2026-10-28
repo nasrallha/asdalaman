@@ -1,0 +1,7 @@
+# Asad Al Amn — cache rules (Apache / LiteSpeed hosting, e.g. Hostinger / cPanel)
+# Browsers must check the server for a newer version every time.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|css|js|jpg|jpeg|png|webp|svg)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>
